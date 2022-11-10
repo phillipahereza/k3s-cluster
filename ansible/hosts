@@ -1,0 +1,10 @@
+[control]
+k8s-master  ansible_connection=ssh
+
+[workers]
+k8s-worker-1  ansible_connection=ssh
+k8s-worker-2  ansible_connection=ssh
+
+[kube:children]
+control
+workers
